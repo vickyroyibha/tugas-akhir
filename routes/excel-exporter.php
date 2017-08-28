@@ -14,7 +14,6 @@ Route::group(['prefix' => 'excel-exporter'], function () {
    	Route::get('neonatal-lengkap', 'KunjunganNeonatalLengkapController@exportToExcel');
    	Route::get('neonatal-pertama', 'KunjunganNeonatalPertamaController@exportToExcel');
    	Route::get('pelayanan-ibuhamil', 'PelayananIbuhamilController@exportToExcel');
-   	Route::get('penyerapan-danabok', 'PenyerapanDanaBokController@exportToExcel');
    	Route::get('pertolongan-persalinan', 'PertolonganPersalinanController@exportToExcel');
    	Route::get('peserta-kb', 'PesertaKbController@exportToExcel');
    	Route::get('proporsi-tb', 'ProporsiTbController@exportToExcel');
@@ -23,7 +22,6 @@ Route::group(['prefix' => 'excel-exporter'], function () {
    	Route::get('rasio-perawat', 'RasioPerawatController@exportToExcel');
    	Route::get('rasio-puskesmas', 'RasioPuskesmasController@exportToExcel');
    	Route::get('rasio-tempattidur', 'RasioTempatTidurController@exportToExcel');
-   	Route::get('sanitasi-rumahtangga', 'SanitasiRumahTanggaController@exportToExcel');
    	Route::get('spesimen-adekuat', 'SpesimenAdekuatAfpController@exportToExcel');
    	Route::get('tatalaksana-pkpr', 'TatalaksanaPkprController@exportToExcel');
 });

@@ -53,10 +53,6 @@ return [
 		'link' => 'pelayanan-ibuhamil'
 	],
 	[
-		'name' => 'Tabel Persentase Penyerapan Dana Bantuan Operasional Kesehatan (BOK)',
-		'link' => 'penyerapan-danabok'
-	],
-	[
 		'name' => 'Tabel Cakupan Pertolongan Persalinan oleh Tenaga Kesehatan',
 		'link' => 'pertolongan-persalinan'
 	],
@@ -87,10 +83,6 @@ return [
 	[
 		'name' => 'Tabel Rasio Tempat Tidur Rumah Sakit per 10.000 Penduduk',
 		'link' => 'rasio-tempattidur'
-	],
-	[
-		'name' => 'Tabel Persentase Rumah Tangga yang Memiliki Akses Terhadap Sanitasi Layak',
-		'link' => 'sanitasi-rumahtangga'
 	],
 	[
 		'name' => 'Tabel Persentase Spesimen Adekuat AFP',

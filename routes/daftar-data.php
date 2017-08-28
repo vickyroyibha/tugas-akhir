@@ -14,7 +14,6 @@ Route::group(['prefix' => 'daftar-data'], function () {
    	Route::get('neonatal-lengkap', 'KunjunganNeonatalLengkapController@show');
    	Route::get('neonatal-pertama', 'KunjunganNeonatalPertamaController@show');
    	Route::get('pelayanan-ibuhamil', 'PelayananIbuhamilController@show');
-   	Route::get('penyerapan-danabok', 'PenyerapanDanaBokController@show');
    	Route::get('pertolongan-persalinan', 'PertolonganPersalinanController@show');
    	Route::get('peserta-kb', 'PesertaKbController@show');
    	Route::get('proporsi-tb', 'ProporsiTbController@show');
@@ -23,7 +22,6 @@ Route::group(['prefix' => 'daftar-data'], function () {
    	Route::get('rasio-perawat', 'RasioPerawatController@show');
    	Route::get('rasio-puskesmas', 'RasioPuskesmasController@show');
    	Route::get('rasio-tempattidur', 'RasioTempatTidurController@show');
-   	Route::get('sanitasi-rumahtangga', 'SanitasiRumahTanggaController@show');
    	Route::get('spesimen-adekuat', 'SpesimenAdekuatAfpController@show');
    	Route::get('tatalaksana-pkpr', 'TatalaksanaPkprController@show');
 });

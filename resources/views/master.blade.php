@@ -26,7 +26,7 @@
 							<tr>
 								<td> {{ $index + 1 }} </td>
 								<td> {{ $tabel['name'] }} </td>
-								<td> 
+								<td>
 									<a href="{{ url('daftar-data/' . $tabel['link']) }}">
 										<button class="btn">Lihat</button>
 									</a>

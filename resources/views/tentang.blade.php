@@ -16,6 +16,8 @@
 						<h3 class="box-title">Tentang</h3>
 					</div>
 					<div class="box-body">
+						<img src="img/uii.png" height="200" width="140">
+						<p> </p>
 						<p>Dashboard Data Kesehatan Nasional ini dibuat sebagai bagian dari Tugas Akhir.
 						<p>Data yang diambil adalah data kesehatan nasional dari 34 provinsi yang ada di Indonesia dalam kurun waktu 3 tahun yaitu dari tahun 2013, 2014, dan tahun 2015.</p>
 						<p>Vicky Vadya Royibha, 2017.</p>
