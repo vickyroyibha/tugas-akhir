@@ -14,7 +14,7 @@
 
         @if (count($errors) > 0)
             <div class="alert alert-danger">
-                <strong>Whoops!</strong> {{ trans('adminlte_lang::message.someproblems') }}<br><br>
+                <strong>Whoops!</strong> "{{ trans('adminlte_lang::message.someproblems') }}"<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
@@ -28,6 +28,7 @@
 
         <login-form name="{{ config('auth.providers.users.field','email') }}"
                     domain="{{ config('auth.defaults.domain','') }}"></login-form>
+        <i class="fa fa-fw fa-plus"></i>
         <a href="{{ url('/register') }}" class="text-center">{{ 'Buat Akun' }}</a>
 
     </div>

@@ -16,10 +16,11 @@
 						<h3 class="box-title">Master Data</h3>
 					</div>
 					<div class="box-body">
+					<input id="search" type="text" placeholder="cari nama tabel">
 						<table class="master-table">
 							<tr>
 								<th> No </th>
-								<th> Nama Tabel </th>
+								<th> Nama Tabel <i class="fa fa-fw sort-icon fa-sort"></th>
 								<th> Pilihan </th>
 							</tr>
 							@foreach($daftarTabel as $index => $tabel)
@@ -28,10 +29,10 @@
 								<td> {{ $tabel['name'] }} </td>
 								<td>
 									<a href="{{ url('daftar-data/' . $tabel['link']) }}">
-										<button class="btn">Lihat</button>
+										<button class="btn">Lihat <i class="fa fa-eye"></i></button>
 									</a>
 									<a href="{{ url('excel-exporter/' . $tabel['link']) }}">
-										<button class="btn">Unduh</button>
+										<button class="btn">Unduh<i class="fa fa-download"></i></button>
 									</a>
 								</td>
 							</tr>

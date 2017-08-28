@@ -29,9 +29,9 @@
                         <a href="{{ url('/logout') }}" class="btn btn-flat" id="logout"
                                        onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
-                                        {{'Logout'}}
+                                        {{'Logout'}} <i class="fa fa-fw fa-sign-out"></i>
                                     </a>
-
+                                        
                                     <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                         {{ csrf_field() }}
                                         <input type="submit" value="logout" style="display: none;">
