@@ -20,7 +20,7 @@
 						<table class="master-table">
 							<tr>
 								<th> No </th>
-								<th> Nama Tabel <i class="fa fa-fw sort-icon fa-sort"></th>
+								<th> Nama Tabel </th>
 								<th> Pilihan </th>
 							</tr>
 							@foreach($daftarTabel as $index => $tabel)
