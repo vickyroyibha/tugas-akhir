@@ -23,21 +23,31 @@
 					</div>
 					<div class="box-body">
 						<a href={{ url('master') }}>
-						<button class="btn">Kembali</button>
+						<button class="btn"><i class="fa fa-arrow-left"></i> Kembali </button>
 						</a>
-						<table class="master-table">
+						<table class="table">
 							<tr>
 								<th> No </th>
-								@foreach(array_keys($daftarData[0]) as $columnName)
+								@php
+									$columns = array_keys($daftarData[0]);
+									array_shift($columns);
+								@endphp
+								@foreach($columns as $columnName)
 									<th> {{ $columnName }} </th>
 								@endforeach
 							</tr>
+
 							@foreach($daftarData as $nomor => $data)
 							<tr>
 								<td> {{ $nomor + 1 }} </td>
-								@foreach(array_keys($daftarData[0]) as $columnName)
+								@foreach($columns as $columnName)
 									<td> {{ $data[$columnName] }} </td>
 								@endforeach
+								<td>
+									<a href="{{ url('keterangan-tabel/' . $data['id']) }}">
+										<button class="btn"> Keterangan <i class="fa fa-info-circle"></i></button>
+									</a>								
+								</td>
 							</tr>
 							@endforeach
 						</table>

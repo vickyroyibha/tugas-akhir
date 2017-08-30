@@ -12,6 +12,7 @@ class DaftarDataPresenter {
     	foreach ($daftarData as $data) {
     		$dataTemp = [];
 
+			$dataTemp['id'] = reset($data);
     		foreach ($columnList as $index => $column) {
     			$dataTemp[$columnDisplayList[$index]] = $data[$column];	
     		}

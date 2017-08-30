@@ -16,27 +16,36 @@
 						<h3 class="box-title">Master Data</h3>
 					</div>
 					<div class="box-body">
-					<input id="search" type="text" placeholder="cari nama tabel">
-						<table class="master-table">
+					<form action="{{ route ('masterdata')}}">
+					<input id="search" type="text" placeholder="cari nama tabel" name="q">
+					<button class="btn btn-primary" type="submit"> Cari </button>
+					</form>
+						<table class="table">
 							<tr>
 								<th> No </th>
 								<th> Nama Tabel </th>
 								<th> Pilihan </th>
 							</tr>
+							@if(!is_null(request()->q) && $daftarTabel->isEmpty())
+							<tr>
+								<td colspan="3"> Data tidak ditemukan! </td>
+							</tr>
+							@else
 							@foreach($daftarTabel as $index => $tabel)
 							<tr>
 								<td> {{ $index + 1 }} </td>
 								<td> {{ $tabel['name'] }} </td>
 								<td>
 									<a href="{{ url('daftar-data/' . $tabel['link']) }}">
-										<button class="btn">Lihat <i class="fa fa-eye"></i></button>
+										<button class="btn"> Lihat <i class="fa fa-eye"></i></button>
 									</a>
 									<a href="{{ url('excel-exporter/' . $tabel['link']) }}">
-										<button class="btn">Unduh<i class="fa fa-download"></i></button>
+										<button class="btn"> Unduh <i class="fa fa-download"></i></button>
 									</a>
 								</td>
 							</tr>
 							@endforeach
+							@endif
 						</table>
 					</div>
 					<!-- /.box-body -->

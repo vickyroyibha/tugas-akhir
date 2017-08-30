@@ -9,7 +9,14 @@ class MasterController extends Controller
 {
     public function show(Request $request)
     {
-    	$daftarTabel = config('tableList');
+    	$daftarTabel = collect(config('tableList'));
+        if(!is_null($request->q)){
+            $daftarTabel = $daftarTabel->filter(function($table) use ($request) {
+                return strpos (strtolower($table['name']), strtolower($request->q)) !== false;
+            });
+        }
     	return view('master', compact('daftarTabel'));
+        
     }
+
 }

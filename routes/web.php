@@ -16,7 +16,8 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
-   Route::get('master', 'MasterController@show');
+   Route::get('master', 'MasterController@show')->name("masterdata");
+   Route::get('keterangan-tabel/{id}', 'KeteranganTabelController@show')->name("keterangan");
    Route::get('tentang', 'TentangController@show');
 
    include 'daftar-data.php';
