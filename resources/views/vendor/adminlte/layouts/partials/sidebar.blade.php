@@ -20,7 +20,7 @@
             <li class="header"><b>{{'MAIN MENU'}}</b></li>
             <!-- Optionally, you can add icons to the links -->
             <li><a href="{{ url('home') }}"><i class='fa fa-dashboard'></i> <span>{{'Dashboard'}}</span></a></li>
-            <li><a href="{{ url('master') }}"><i class='fa fa-table'></i> <span>{{'Master Data'}}</span></a></li>
+            <li><a href="{{ url('master') }}"><i class='fa fa-database'></i> <span>{{'Master Data'}}</span></a></li>
             <li><a href="{{ url('tentang') }}"><i class='fa fa-book'></i> <span>{{'Tentang'}}</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>

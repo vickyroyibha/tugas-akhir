@@ -17,9 +17,10 @@
 					</div>
 					<div class="box-body">
 					<form action="{{ route ('masterdata')}}">
-					<input id="search" type="text" placeholder="cari nama tabel" name="q">
-					<button class="btn btn-primary" type="submit"> Cari </button>
+					<input id="search" type="text" placeholder="Cari Nama Tabel" name="q">
+					<button class="btn btn-primary" type="submit"> <i class="fa fa-search"></i></button>
 					</form>
+					<p>
 						<table class="table">
 							<tr>
 								<th> No </th>
@@ -37,11 +38,14 @@
 								<td> {{ $tabel['name'] }} </td>
 								<td>
 									<a href="{{ url('daftar-data/' . $tabel['link']) }}">
-										<button class="btn"> Lihat <i class="fa fa-eye"></i></button>
+										<button class="btn"> Tabel <i class="fa fa-table"></i></button>
 									</a>
 									<a href="{{ url('excel-exporter/' . $tabel['link']) }}">
 										<button class="btn"> Unduh <i class="fa fa-download"></i></button>
 									</a>
+									<a href="{{ url('keterangan-tabel/' . $tabel['link']) }}">
+										<button class="btn"> Info <i class="fa fa-info-circle"></i></button>
+									</a>	
 								</td>
 							</tr>
 							@endforeach

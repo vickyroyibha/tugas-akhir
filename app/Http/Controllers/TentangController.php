@@ -8,6 +8,7 @@ class TentangController extends Controller
 {
     public function show()
     {
+        
     	return view('tentang');
     }
 }
