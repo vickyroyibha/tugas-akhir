@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2017 at 06:30 PM
+-- Generation Time: Sep 05, 2017 at 08:31 PM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.0.18
 
@@ -21,6 +21,47 @@ SET time_zone = "+00:00";
 --
 -- Database: `dashboard`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `keterangan_tabel`
+--
+
+CREATE TABLE `keterangan_tabel` (
+  `id_keterangan` int(11) NOT NULL,
+  `id_tablelist` int(11) NOT NULL,
+  `keterangan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `keterangan_tabel`
+--
+
+INSERT INTO `keterangan_tabel` (`id_keterangan`, `id_tablelist`, `keterangan`) VALUES
+(1, 1, 'Tabel Angka Kesakitan DBD per 100.000 Penduduk ini menyimpan data angka kesakitan DBD (Demam Berdarah Dengue) per 100.000 penduduk, dimana angka kematian akibat DBD dikategorikan tinggi jika CFR (Case Fatality Rate) atau angka yang dinyatakan ke dalam persentase yang berisikan data orang mengalami kematian akibat suatu penyakit tertentu lebih dari 1%.'),
+(2, 2, 'Tabel Cakupan Pemberian ASI Eksklusif pada Bayi 0 - 6 Bulan ini menyimpan data pemberian Air Susu Ibu (ASI) eksklusif, dimana berdasarkan Peraturan Pemerintah Nomor 33 Tahun 2012 adalah ASI yang diberikan kepada bayi sejak dilahirkan selama enam bulan, tanpa menambahkan atau mengganti dengan makanan atau minuman lain (kecuali obat, vitamin, dan mineral).'),
+(3, 3, 'Tabel Angka Cacat Tingkat II Kusta per 100.000 Penduduk ini menyimpan angka cacat tingkat II kusta per 1.000.000 penduduk, dimana pengendalian kasus kusta bertujuan untuk meningkatkan deteksi kasus sejak dini. Indikator yang digunakan untuk menunjukkan keberhasilan dalam mendeteksi kasus baru kusta yaitu angka cacat Tingkat II.'),
+(4, 4, 'Tabel Persentase Cakupan Imunisasi Dasar Lengkap Pada Bayi ini menyimpan data cakupan imunisasi lengkap pada bayi yang terdiri dari 1 dosis BCG (Bacillus Calmette Guerin), 3 dosis DPT-HB dan atau DPT-HB-Hib (vaksin kombinasi Diphteria-Pertussis-Tetanus, Hepatitis B, dan Haemophilus Influenza type B), 4 dosis polio, dan 1 dosis campak.'),
+(5, 5, 'Tabel Cakupan Desa/Kelurahan UCI (Universal Child Immunization) ini menyimpan data cakupan desa UCI atau Universal Child Immunization yang artinya desa yang melaksanakan UCI sudah mencapai target imunisasi dasar secara lengkap pada bayi (0 – 11 bulan), ibu hamil, wanita usia subur, dan anak sekolah tingkat dasar.'),
+(6, 6, 'Tabel Persentase Cakupan Imunisasi Campak Pada Bayi ini menyimpan data cakupan imunisasi campak pada bayi dan dengan adanya imunisasi tersebut diharapkan dapat menurunkan angka kematian yang diakibatkan penyakit campak. '),
+(7, 7, 'Tabel Incidence Rate Campak per 100.000 Penduduk ini menyimpan angka incidence rate campak per 100.000 penduduk di Indonesia. Incidence Rate itu sendiri merupakan frekuensi penyakit atau kasus baru yang berjangkit dalam masyarakat di suatu wilayah atau negara pada waktu tertentu (umumnya 1 tahun), dibandingkan dengan jumlah penduduk yang mungkin terkena penyakit baru tersebut.'),
+(8, 8, 'Tabel Angka Notifikasi Kasus TB Paru BTA+ per 100.000 Penduduk ini menyimpan angka notifikasi kasus TB (Tuberkulosis) paru per 100.000 penduduk, dimana angka notifikasi kasus adalah angka yang menunjukkan jumlah pasien baru yang ditemukan dan tercatat di antara 100.000 penduduk di suatu wilayah tertentu. Angka ini apabila dikumpulkan serial akan menggambarkan kecenderungan penemuan kasus dari tahun ke tahun di wilayah tersebut. Angka ini berguna untuk menunjukkan kecenderungan (tren) meningkat atau menurunnya penemuan pasien pada wilayah tersebut.'),
+(9, 9, 'Tabel Cakupan Penanganan Komplikasi Kebidanan ini menyimpan data persentase cakupan penanganan komplikasi kebidanan, dimana data ini mengukur kemampuan negara dalam menyelenggarakan pelayanan kesehatan secara profesional kepada ibu (hamil, bersalin, nifas) dengan komplikasi. '),
+(10, 10, 'Tabel Cakupan Penanganan Komplikasi Neonatal ini menyimpan data persentase cakupan komplikasi neonatal yaitu penyakit atau kelainan yang dapat menyebabkan kecacatan dan atau kematian seperti hipotermia, trauma lahir, maupun sindrom gangguan pernafasan.'),
+(11, 11, 'Tabel Cakupan Kunjungan Neonatal Lengkap ini menyimpan data kunjungan neonatal lengkap pada bayi. Neonatal itu sendiri adalah kondisi dimana seorang bayi baru lahir (umur 6jam – 48 jam) memperoleh pelayanan kunjungan neonatal minimal tiga kali sesuai standar di satu wilayah kerja dalam kurun waktu satu tahun. '),
+(12, 12, 'Tabel Cakupan Kunjungan Neonatal Pertama ini menyimpan data kunjungan neonatal pertama pada bayi, dimana data kunjungan neonatal pertama ini merupakan indikator yang menggambarkan upaya kesehatan yang dilakukan untuk mengurangi risiko kematian bayi pada periode neonatal yaitu 6 – 48 jam setelah lahir yang meliputi kunjungan menggunakan pendekatan Manajemen Terpadu Balita Muda (MTBM) termasuk konseling perawatan bayi baru lahir, ASI eksklusif, pemberian vitamin K1 injeksi, dan Hepatitis B0 injeksi bila belum diberikan.'),
+(13, 13, 'Tabel Cakupan Pelayanan Kesehatan Ibu Hamil K4 ini menyimpan data jumlah ibu hamil yang telah memperoleh pelayanan Antenatal Care (pemeriksaan kehamilan yang diberikan oleh bidan atau dokter kepada ibu selama masa kehamilan) sesuai dengan standar paling sedikit empat kali sesuai jadwal yang dianjurkan di tiap trimester dibandingkan jumlah sasaran ibu hamil di satu wilayah kerja pada kurun waktu satu tahun. Indikator tersebut memperlihatkan akses pelayanan kesehatan terhadap ibu hamil dan tingkat kepatuhan ibu hamil dalam memeriksakan kehamilannya ke tenaga kesehatan.'),
+(14, 14, 'Tabel Cakupan Pertolongan Persalinan oleh Tenaga Kesehatan ini menyimpan data cakupan pertolongan persalinan oleh tenaga kesehatan berdasarkan analisis kematian ibu yang dilakukan Direktorat Bina Kesehatan Ibu pada tahun 2010, yang membuktikan bahwa kematian ibu terkait erat dengan penolong persalinan dan tempat atau fasilitas persalinan. '),
+(15, 15, 'Tabel Cakupan Peserta KB Baru ini menyimpan persentase cakupan Peserta KB (Keluarga Berencana) Baru, dimana Peserta KB Baru itu sendiri adalah pasangan usia subur yang baru pertama kali menggunakan alat/cara kontrasepsi dan atau pasangan usia subur yang kembali menggunakan metode kontrasepsi setelah melahirkan/keguguran.'),
+(16, 16, 'Tabel Proporsi BTA+ diantara Seluruh Kasus TB Paru ini menyimpan data angka proporsi BTA+ (Bakteri Tahan Asam Positif) diantara seluruh kasus TB paru. Angka persentase ini merupakan indikator yang menggambarkan prioritas penemuan pasien tuberkulosis yang menular di antara seluruh pasien tuberkulosis yang diobati.'),
+(17, 17, 'Tabel Rasio Bidan Terhadap 100.000 Penduduk di Indonesia ini menyimpan data rasio bidan terhadap 100.000 penduduk di Indonesia, dalam rentang waktu tiga tahun.'),
+(18, 18, 'Tabel Rasio Dokter Umum Terhadap 100.000 Penduduk di Indonesia ini menyimpan data rasio dokter umum terhadap 100.000 penduduk di Indonesia, dalam rentang waktu tiga tahun.'),
+(19, 19, 'Tabel Rasio Perawat Terhadap 100.000 Penduduk di Indonesia ini menyimpan data rasio perawat terhadap 100.000 penduduk di Indonesia, dalam rentang waktu tiga tahun.'),
+(20, 20, 'Tabel Rasio Puskesmas per 30.000 Penduduk se-Indonesia ini menyimpan data rasio puskesmas per 30.000 penduduk di Indonesia, dalam rentang waktu tiga tahun. Perlu diingat bahwa tabel ini belum sepenuhnya menggambarkan kondisi yang sebenarnya mengenai aksesibilitas masyarakat terhadap pelayanan fasilitas kesehatan dasar, karena data yang terdapat pada tabel ini belum mencakupi data jumlah penduduk di suatu provinsi dan data mengenai kondisi geografisnya.'),
+(21, 21, 'Tabel Rasio Tempat Tidur Rumah Sakit per 10.000 Penduduk ini menyimpan data rasio tempat tidur yang ada di Rumah Sakit per 1000 penduduk di Indonesia, dalam rentang waktu tiga tahun. Tabel ini sekaligus menjelaskan tentang terpenuhi atau tidaknya kebutuhan masyarakat terhadap pelayanan kesehatan rujukan dan perorangan di suatu wilayah per 1000 penduduk di Indonesia.'),
+(22, 22, 'Tabel Persentase Spesimen Adekuat AFP ini menyimpan data angka persentase spesimen adekuat AFP yaitu Acute Flaccid Paralysis atau Penyakit Lumpuh Layu Akut.'),
+(23, 23, 'Tabel Persentase Kabupaten/Kota dengan Minimal 4 Puskesmas Mampu Tatalaksana PKPR ini menyimpan data persentase kota dengan minimal terdapat empat puskesmas yang mampu tatalaksana PKPR (Pelayanan Kesehatan Perilaku Remaja) di Puskesmas, yang bertujuan khusus untuk meningkatkan pengetahuan dan keterampilan remaja tentang kesehatan reproduksi dan perilaku hidup sehat serta memberikan pelayanan kesehatan yang berkualitas kepada remaja.  ');
 
 -- --------------------------------------------------------
 
@@ -1451,11 +1492,18 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `remember_token`, `created_at`, `updated_at`, `username`) VALUES
-(1, 'Vicky Vadya Royibha', '$2y$10$EQoUN4S8cng4Pq0tXPOCa.czn1oMFTH/cSpIrF45qbj9SOdUK.hU2', 'nQEbPZNWo1imadAaucvfqTLq2gD4OvgRGdFh4Uhm3ZR9D7dUx3zoFjKX8FUE', '2017-05-16 07:46:37', '2017-05-16 07:46:37', 'vickyroyibha');
+(1, 'Vicky Vadya Royibha', '$2y$10$EQoUN4S8cng4Pq0tXPOCa.czn1oMFTH/cSpIrF45qbj9SOdUK.hU2', 'Ldc3QU6jiBr3ymYHrfNLhT9LdYIeQ3vywadToLtWKNJyVcG1YVghUOm2advP', '2017-05-16 07:46:37', '2017-05-16 07:46:37', 'vickyroyibha'),
+(2, 'Taylor Swift', '$2y$10$QS9J1l59Br4draAuFfKcc.ZQ/Yph0ikQ4TPcLPPdbJ7uKEdmGHn7S', 'zp2Nc6huOe4mnEjjJRucgYICU0brHCiv5J8zGdJPHPuEU01EatmwvKhgrH64', '2017-09-01 01:40:41', '2017-09-01 01:40:41', 'taylorswift');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `keterangan_tabel`
+--
+ALTER TABLE `keterangan_tabel`
+  ADD PRIMARY KEY (`id_keterangan`);
 
 --
 -- Indexes for table `md_angka_dbd`
@@ -1657,6 +1705,11 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `keterangan_tabel`
+--
+ALTER TABLE `keterangan_tabel`
+  MODIFY `id_keterangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+--
 -- AUTO_INCREMENT for table `md_angka_dbd`
 --
 ALTER TABLE `md_angka_dbd`
@@ -1800,7 +1853,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --
