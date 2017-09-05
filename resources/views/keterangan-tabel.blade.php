@@ -17,7 +17,7 @@
 					</div>
 					<div class="box-body">
 						<p> </p>
-						<p> Tabel ini berisi asdfg </p>
+						<p> {{ $keterangan_tabel->keterangan }}</p>
 					</div>
 					<!-- /.box-body -->
 				</div>

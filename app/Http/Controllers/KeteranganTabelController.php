@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\MdAngkaDbd;
+use App\KeteranganTabel;
 
 class KeteranganTabelController extends Controller
 {
     public function show(Request $request, $id)
     {
-        $keterangan = MdAngkaDbd::where('id_dbd', $id)->first();
-    	return view('keterangan-tabel', compact('keterangan'));
+        $keterangan_tabel = KeteranganTabel::where('id_tablelist', $id)->firstOrFail();
+    	return view('keterangan-tabel', compact('keterangan_tabel'));
         
     }
 }

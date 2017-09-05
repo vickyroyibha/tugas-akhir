@@ -55,9 +55,12 @@ desired effect
 
 </div><!-- ./wrapper -->
 </div>
-@section('scripts')
+
+@section('core_scripts')
     @include('adminlte::layouts.partials.scripts')
 @show
+
+@stack('scripts')
 
 </body>
 </html>
