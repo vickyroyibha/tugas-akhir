@@ -16,8 +16,13 @@
 						<h3 class="box-title">Keterangan Tabel</h3>
 					</div>
 					<div class="box-body">
-						<p> </p>
-						<p> {{ $keterangan_tabel->keterangan }}</p>
+						<a href={{ url('master') }}>
+						<button class="btn"><i class="fa fa-arrow-left"></i> Kembali </button>
+						</a>
+							<div class="box-body">
+								<p> </p>
+								<p> {{ $keterangan_tabel->keterangan }}</p>
+							</div>
 					</div>
 					<!-- /.box-body -->
 				</div>
