@@ -13,8 +13,11 @@
             <li class="header"><b>{{'MAIN MENU'}}</b></li>
             <li class="treeview">
                 <a href="{{ url('home') }}">
-                    <i class="fa fa-dashboard"></i>  Main Dashboard <i class="fa fa-angle-left pull-right"></i>
-                </a>                            
+                    <i class="fa fa-dashboard"></i> Dashboard <i class="fa fa-angle-left pull-right"></i>
+                </a>
+                    <ul class="treeview-menu">
+                        <li class="treeview"> <a href="{{ url('main') }}"> Main Dashboard </a> </li>
+                    </ul>                            
                     <ul class="treeview-menu">
                         <li class="treeview"> <a href="{{ url('home1') }}"> Fakta Sarana Kesehatan </a> </li>
                     </ul>
