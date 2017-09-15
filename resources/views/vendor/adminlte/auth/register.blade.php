@@ -10,7 +10,7 @@
     <div id="app" v-cloak>
         <div class="register-box">
             <div class="register-logo">
-                <a href="{{ url('/home') }}"><b>Dashboard Data Kesehatan</b></a>
+                <a href="{{ url('/home') }}"><b><small>Business Intelligence</b> Manajemen Data Kesehatan Nasional</small></a>
             </div>
 
             @if (count($errors) > 0)
