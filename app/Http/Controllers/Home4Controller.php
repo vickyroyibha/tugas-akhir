@@ -1,13 +1,13 @@
 <?php
-
 namespace App\Http\Controllers;
 
+use App\Http\Requests;
 use Illuminate\Http\Request;
 
-class TentangController extends Controller
+class Home4Controller extends Controller
 {
     public function show()
     {
-    	return view('tentang');
+    	return view('vendor/adminlte/home4');
     }
 }

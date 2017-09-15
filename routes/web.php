@@ -16,6 +16,10 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => 'auth'], function () {
+   Route::get('home1', 'Home1Controller@show');
+   Route::get('home2', 'Home2Controller@show');
+   Route::get('home3', 'Home3Controller@show');
+   Route::get('home4', 'Home4Controller@show');
    Route::get('master', 'MasterController@show')->name("masterdata");
    Route::get('keterangan-tabel/{id}', 'KeteranganTabelController@show')->name("keterangan");
    Route::get('tentang', 'TentangController@show');

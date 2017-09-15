@@ -1,10 +1,4 @@
 <?php
-
-/*
- * Taken from
- * https://github.com/laravel/framework/blob/5.3/src/Illuminate/Auth/Console/stubs/make/controllers/HomeController.stub
- */
-
 namespace App\Http\Controllers;
 
 use App\Http\Requests;

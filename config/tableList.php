@@ -81,7 +81,7 @@ return [
 		'link' => 'rasio-puskesmas'
 	],
 	[
-		'name' => 'Tabel Rasio Tempat Tidur Rumah Sakit per 10.000 Penduduk',
+		'name' => 'Tabel Rasio Tempat Tidur Rumah Sakit per 1000 Penduduk',
 		'link' => 'rasio-tempattidur'
 	],
 	[

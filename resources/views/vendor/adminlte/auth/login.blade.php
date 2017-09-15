@@ -6,7 +6,7 @@
 
 @section('content')
 <body class="hold-transition login-page">
-    <div id="app" v-cloak>
+   <div id="app" v-cloak>
         <div class="login-box">
             <div class="login-logo">
                 <a href="{{ url('/home') }}"><b><small>Business Intelligence</b> Manajemen Data Kesehatan Nasional</small></a>
