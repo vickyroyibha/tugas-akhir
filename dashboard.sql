@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2017 at 08:31 PM
+-- Generation Time: Sep 15, 2017 at 08:28 AM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.0.18
 
@@ -59,7 +59,7 @@ INSERT INTO `keterangan_tabel` (`id_keterangan`, `id_tablelist`, `keterangan`) V
 (18, 18, 'Tabel Rasio Dokter Umum Terhadap 100.000 Penduduk di Indonesia ini menyimpan data rasio dokter umum terhadap 100.000 penduduk di Indonesia, dalam rentang waktu tiga tahun.'),
 (19, 19, 'Tabel Rasio Perawat Terhadap 100.000 Penduduk di Indonesia ini menyimpan data rasio perawat terhadap 100.000 penduduk di Indonesia, dalam rentang waktu tiga tahun.'),
 (20, 20, 'Tabel Rasio Puskesmas per 30.000 Penduduk se-Indonesia ini menyimpan data rasio puskesmas per 30.000 penduduk di Indonesia, dalam rentang waktu tiga tahun. Perlu diingat bahwa tabel ini belum sepenuhnya menggambarkan kondisi yang sebenarnya mengenai aksesibilitas masyarakat terhadap pelayanan fasilitas kesehatan dasar, karena data yang terdapat pada tabel ini belum mencakupi data jumlah penduduk di suatu provinsi dan data mengenai kondisi geografisnya.'),
-(21, 21, 'Tabel Rasio Tempat Tidur Rumah Sakit per 10.000 Penduduk ini menyimpan data rasio tempat tidur yang ada di Rumah Sakit per 1000 penduduk di Indonesia, dalam rentang waktu tiga tahun. Tabel ini sekaligus menjelaskan tentang terpenuhi atau tidaknya kebutuhan masyarakat terhadap pelayanan kesehatan rujukan dan perorangan di suatu wilayah per 1000 penduduk di Indonesia.'),
+(21, 21, 'Tabel Rasio Tempat Tidur Rumah Sakit per 1000 Penduduk ini menyimpan data rasio tempat tidur yang ada di Rumah Sakit per 1000 penduduk di Indonesia, dalam rentang waktu tiga tahun. Tabel ini sekaligus menjelaskan tentang terpenuhi atau tidaknya kebutuhan masyarakat terhadap pelayanan kesehatan rujukan dan perorangan di suatu wilayah per 1000 penduduk di Indonesia.'),
 (22, 22, 'Tabel Persentase Spesimen Adekuat AFP ini menyimpan data angka persentase spesimen adekuat AFP yaitu Acute Flaccid Paralysis atau Penyakit Lumpuh Layu Akut.'),
 (23, 23, 'Tabel Persentase Kabupaten/Kota dengan Minimal 4 Puskesmas Mampu Tatalaksana PKPR ini menyimpan data persentase kota dengan minimal terdapat empat puskesmas yang mampu tatalaksana PKPR (Pelayanan Kesehatan Perilaku Remaja) di Puskesmas, yang bertujuan khusus untuk meningkatkan pengetahuan dan keterampilan remaja tentang kesehatan reproduksi dan perilaku hidup sehat serta memberikan pelayanan kesehatan yang berkualitas kepada remaja.  ');
 
@@ -1492,7 +1492,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `remember_token`, `created_at`, `updated_at`, `username`) VALUES
-(1, 'Vicky Vadya Royibha', '$2y$10$EQoUN4S8cng4Pq0tXPOCa.czn1oMFTH/cSpIrF45qbj9SOdUK.hU2', 'Ldc3QU6jiBr3ymYHrfNLhT9LdYIeQ3vywadToLtWKNJyVcG1YVghUOm2advP', '2017-05-16 07:46:37', '2017-05-16 07:46:37', 'vickyroyibha'),
+(1, 'Vicky Vadya Royibha', '$2y$10$EQoUN4S8cng4Pq0tXPOCa.czn1oMFTH/cSpIrF45qbj9SOdUK.hU2', 'Xpb5YZqov9sJM6WATTrtcgunYa8NvytqHpiyQjzENSvJiCJgMzHeBr8jbC9D', '2017-05-16 07:46:37', '2017-05-16 07:46:37', 'vickyroyibha'),
 (2, 'Taylor Swift', '$2y$10$QS9J1l59Br4draAuFfKcc.ZQ/Yph0ikQ4TPcLPPdbJ7uKEdmGHn7S', 'zp2Nc6huOe4mnEjjJRucgYICU0brHCiv5J8zGdJPHPuEU01EatmwvKhgrH64', '2017-09-01 01:40:41', '2017-09-01 01:40:41', 'taylorswift');
 
 --
