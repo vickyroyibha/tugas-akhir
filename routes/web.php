@@ -27,6 +27,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     include 'daftar-data.php';
     include 'excel-exporter.php';
+
+    Route::get('create-table', 'MasterController@createTable');
    
    
 

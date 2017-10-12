@@ -44,7 +44,6 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-right">
-            
                                 </div>
                             </li>
                         </ul>
