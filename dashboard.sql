@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2017 at 08:28 AM
+-- Generation Time: Oct 13, 2017 at 05:57 AM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.0.18
 
@@ -1474,6 +1474,48 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `table_list`
+--
+
+CREATE TABLE `table_list` (
+  `id_tablelist` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL,
+  `categories` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `table_list`
+--
+
+INSERT INTO `table_list` (`id_tablelist`, `name`, `link`, `categories`) VALUES
+(1, 'Tabel Angka Kesakitan DBD per 100.000 Penduduk', 'angka-dbd', 'pengendalian-penyakit'),
+(2, 'Tabel Cakupan Pemberian ASI Eksklusif pada Bayi 0 - 6 Bulan', 'asi-eks', 'kesehatan-keluarga'),
+(3, 'Tabel Angka Cacat Tingkat II Kusta per 100.000 Penduduk', 'cacat-kusta', 'pengendalian-penyakit'),
+(4, 'Tabel Persentase Cakupan Imunisasi Dasar Lengkap Pada Bayi', 'dasar-lengkap', 'kesehatan-keluarga'),
+(5, 'Tabel Cakupan Desa/Kelurahan UCI (Universal Child Immunization)', 'desa-uci', 'kesehatan-keluarga'),
+(6, 'Tabel Persentase Cakupan Imunisasi Campak Pada Bayi', 'imunisasi-campak', 'kesehatan-keluarga'),
+(7, 'Tabel Incidence Rate Campak per 100.000 Penduduk', 'incidencerate-campak', 'pengendalian-penyakit'),
+(8, 'Tabel Angka Notifikasi Kasus TB Paru BTA+ per 100.000 Penduduk', 'kasus-tb', 'pengendalian-penyakit'),
+(9, 'Tabel Cakupan Penanganan Komplikasi Kebidanan', 'komplikasi-kebidanan', 'kesehatan-keluarga'),
+(10, 'Tabel Cakupan Penanganan Komplikasi Neonatal', 'komplikasi-neonatal', 'kesehatan-keluarga'),
+(11, 'Tabel Cakupan Kunjungan Neonatal Lengkap', 'neonatal-lengkap', 'kesehatan-keluarga'),
+(12, 'Tabel Cakupan Kunjungan Neonatal Pertama', 'neonatal-pertama', 'kesehatan-keluarga'),
+(13, 'Tabel Cakupan Pelayanan Kesehatan Ibu Hamil K4', 'pelayanan-ibuhamil', 'kesehatan-keluarga'),
+(14, 'Tabel Cakupan Pertolongan Persalinan oleh Tenaga Kesehatan', 'pertolongan-persalinan', 'kesehatan-keluarga'),
+(15, 'Tabel Cakupan Peserta KB Baru', 'peserta-kb', 'kesehatan-keluarga'),
+(16, 'Tabel Proporsi BTA+ diantara Seluruh Kasus TB Paru', 'proporsi-tb', 'pengendalian-penyakit'),
+(17, 'Tabel Rasio Bidan Terhadap 100.000 Penduduk di Indonesia', 'rasio-bidan', 'tenaga-kesehatan'),
+(18, 'Tabel Rasio Dokter Umum Terhadap 100.000 Penduduk di Indonesia', 'rasio-dokterumum', 'tenaga-kesehatan'),
+(19, 'Tabel Rasio Perawat Terhadap 100.000 Penduduk di Indonesia', 'rasio-perawat', 'tenaga-kesehatan'),
+(20, 'Tabel Rasio Puskesmas per 30.000 Penduduk se-Indonesia', 'rasio-puskesmas', 'sarana-kesehatan'),
+(21, 'Tabel Rasio Tempat Tidur Rumah Sakit per 1000 Penduduk', 'rasio-tempattidur', 'sarana-kesehatan'),
+(22, 'Tabel Persentase Spesimen Adekuat AFP', 'spesimen-adekuat', 'pengendalian-penyakit'),
+(23, 'Tabel Persentase Kabupaten/Kota dengan Minimal 4 Puskesmas Mampu Tatalaksana PKPR', 'tatalaksana-pkpr', 'kesehatan-keluarga');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -1492,8 +1534,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `remember_token`, `created_at`, `updated_at`, `username`) VALUES
-(1, 'Vicky Vadya Royibha', '$2y$10$EQoUN4S8cng4Pq0tXPOCa.czn1oMFTH/cSpIrF45qbj9SOdUK.hU2', 'Xpb5YZqov9sJM6WATTrtcgunYa8NvytqHpiyQjzENSvJiCJgMzHeBr8jbC9D', '2017-05-16 07:46:37', '2017-05-16 07:46:37', 'vickyroyibha'),
-(2, 'Taylor Swift', '$2y$10$QS9J1l59Br4draAuFfKcc.ZQ/Yph0ikQ4TPcLPPdbJ7uKEdmGHn7S', 'zp2Nc6huOe4mnEjjJRucgYICU0brHCiv5J8zGdJPHPuEU01EatmwvKhgrH64', '2017-09-01 01:40:41', '2017-09-01 01:40:41', 'taylorswift');
+(1, 'Vicky Vadya Royibha', '$2y$10$EQoUN4S8cng4Pq0tXPOCa.czn1oMFTH/cSpIrF45qbj9SOdUK.hU2', 'L3Xs3kIq0Vtb49A9m2IA7uhgI8M4IC2VoWYzPh1Tst2PkIB5PemZCNWrBjDu', '2017-05-16 07:46:37', '2017-05-16 07:46:37', 'vickyroyibha'),
+(2, 'Taylor Swift', '$2y$10$QS9J1l59Br4draAuFfKcc.ZQ/Yph0ikQ4TPcLPPdbJ7uKEdmGHn7S', 'zp2Nc6huOe4mnEjjJRucgYICU0brHCiv5J8zGdJPHPuEU01EatmwvKhgrH64', '2017-09-01 01:40:41', '2017-09-01 01:40:41', 'taylorswift'),
+(3, 'Admin Sistem', '$2y$10$Q8nOFyHEoiUWWgKXjUV5C.pCSDiqVCId1SdQ1CUsEWKPWYIPXz2uC', 'qye9rYUCx2oV9mFqq5YbqtbwasRpLA0YPC79JXqp5EvOerbjFT6M3CEPWGtg', '2017-09-18 18:42:41', '2017-09-18 18:42:41', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -1694,6 +1737,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `table_list`
+--
+ALTER TABLE `table_list`
+  ADD PRIMARY KEY (`id_tablelist`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -1709,151 +1758,187 @@ ALTER TABLE `users`
 --
 ALTER TABLE `keterangan_tabel`
   MODIFY `id_keterangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 --
 -- AUTO_INCREMENT for table `md_angka_dbd`
 --
 ALTER TABLE `md_angka_dbd`
   MODIFY `id_dbd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_asi_eksklusif`
 --
 ALTER TABLE `md_asi_eksklusif`
   MODIFY `id_asi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_cacat_kusta`
 --
 ALTER TABLE `md_cacat_kusta`
   MODIFY `id_kusta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_dasar_lengkap`
 --
 ALTER TABLE `md_dasar_lengkap`
   MODIFY `id_dasarlengkap` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_desa_uci`
 --
 ALTER TABLE `md_desa_uci`
   MODIFY `id_uci` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_imunisasi_campak`
 --
 ALTER TABLE `md_imunisasi_campak`
   MODIFY `id_campak` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_incidencerate_campak`
 --
 ALTER TABLE `md_incidencerate_campak`
   MODIFY `id_incidencerate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_kasus_tb`
 --
 ALTER TABLE `md_kasus_tb`
   MODIFY `id_tbcase` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_kesehatan_keluarga`
 --
 ALTER TABLE `md_kesehatan_keluarga`
   MODIFY `id_kesehatan_keluarga` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `md_komplikasi_kebidanan`
 --
 ALTER TABLE `md_komplikasi_kebidanan`
   MODIFY `id_komplikasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_komplikasi_neonatal`
 --
 ALTER TABLE `md_komplikasi_neonatal`
   MODIFY `id_neonatalk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_neonatal_lengkap`
 --
 ALTER TABLE `md_neonatal_lengkap`
   MODIFY `id_neonatalfull` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_neonatal_pertama`
 --
 ALTER TABLE `md_neonatal_pertama`
   MODIFY `id_neonatal1` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_pelayanan_ibuhamil`
 --
 ALTER TABLE `md_pelayanan_ibuhamil`
   MODIFY `id_ibuhamil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_penanganan_kebidanan`
 --
 ALTER TABLE `md_penanganan_kebidanan`
   MODIFY `id_kebidanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_pengendalian_penyakit`
 --
 ALTER TABLE `md_pengendalian_penyakit`
   MODIFY `id_pengendalian_penyakit` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `md_pertolongan_persalinan`
 --
 ALTER TABLE `md_pertolongan_persalinan`
   MODIFY `id_persalinan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_peserta_kb`
 --
 ALTER TABLE `md_peserta_kb`
   MODIFY `id_kb` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_proporsi_tb`
 --
 ALTER TABLE `md_proporsi_tb`
   MODIFY `id_tb` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_provinsi`
 --
 ALTER TABLE `md_provinsi`
   MODIFY `id_provinsi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_rasio_bidan`
 --
 ALTER TABLE `md_rasio_bidan`
   MODIFY `id_bidan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_rasio_dokterumum`
 --
 ALTER TABLE `md_rasio_dokterumum`
   MODIFY `id_dokterumum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_rasio_perawat`
 --
 ALTER TABLE `md_rasio_perawat`
   MODIFY `id_perawat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_rasio_puskesmas`
 --
 ALTER TABLE `md_rasio_puskesmas`
   MODIFY `id_puskesmas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_rasio_tempattidur`
 --
 ALTER TABLE `md_rasio_tempattidur`
   MODIFY `id_rasio_tempattidur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_spesimen_adekuatafp`
 --
 ALTER TABLE `md_spesimen_adekuatafp`
   MODIFY `id_spesimen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `md_tatalaksana_pkpr`
 --
 ALTER TABLE `md_tatalaksana_pkpr`
   MODIFY `id_tatalaksana` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `table_list`
+--
+ALTER TABLE `table_list`
+  MODIFY `id_tablelist` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- Constraints for dumped tables
 --
