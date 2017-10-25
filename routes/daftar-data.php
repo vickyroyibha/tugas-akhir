@@ -1,13 +1,13 @@
 <?php
 
 Route::group(['prefix' => 'daftar-data'], function () {
-   	Route::get('angka-dbd', 'AngkaDbdController@show');
+	Route::get('angka-dbd', 'AngkaDbdController@show');
    	Route::get('asi-eks', 'AsiEksklusifController@show');
    	Route::get('cacat-kusta', 'CacatKustaController@show');
    	Route::get('dasar-lengkap', 'DasarLengkapController@show');
    	Route::get('desa-uci', 'DesaUciController@show');
    	Route::get('imunisasi-campak', 'ImunisasiCampakController@show');
-   	Route::get('incidencerate-campak', 'IncidenceRateCampakController@show');
+	Route::get('incidencerate-campak', 'IncidenceRateCampakController@show');
    	Route::get('kasus-tb', 'KasusTbController@show');
    	Route::get('komplikasi-kebidanan', 'KomplikasiKebidananController@show');
    	Route::get('komplikasi-neonatal', 'KomplikasiNeonatalController@show');
@@ -23,5 +23,11 @@ Route::group(['prefix' => 'daftar-data'], function () {
    	Route::get('rasio-puskesmas', 'RasioPuskesmasController@show');
    	Route::get('rasio-tempattidur', 'RasioTempatTidurController@show');
    	Route::get('spesimen-adekuat', 'SpesimenAdekuatAfpController@show');
-   	Route::get('tatalaksana-pkpr', 'TatalaksanaPkprController@show');
+  	Route::get('tatalaksana-pkpr', 'TatalaksanaPkprController@show');
+	Route::get('angka-melek', 'AngkaMelekController@show');
+	Route::get('jumlah-balita', 'JumlahBalitaController@show');
+	Route::get('jumlah-ibuhamil', 'JumlahIbuHamilController@show');
+	Route::get('jumlah-penduduk', 'JumlahPendudukController@show');
+	Route::get('indeks-gini', 'IndeksGiniController@show');
+	Route::get('indeks-pembangunan-manusia', 'IndeksPembangunanManusiaController@show');
 });

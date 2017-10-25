@@ -21,6 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('home2', 'Home2Controller@show');
     Route::get('home3', 'Home3Controller@show');
     Route::get('home4', 'Home4Controller@show');
+    Route::get('home5', 'Home5Controller@show');
     Route::get('master', 'MasterController@show')->name("masterdata");
     Route::get('keterangan-tabel/{id}', 'KeteranganTabelController@show')->name("keterangan");
     Route::get('tentang', 'TentangController@show');
@@ -29,7 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
     include 'excel-exporter.php';
 
     Route::get('create-table', 'MasterController@createTable');
-   
+    Route::post('create-table', 'MasterController@storeTableData');
    
 
     //Please do not remove this if you want adminlte:route and adminlte:link commands to works correctly.

@@ -30,6 +30,9 @@
                     <ul class="treeview-menu">
                         <li class="treeview"> <a href="{{ url('home4') }}"> Fakta Pengendalian Penyakit </a> </li>
                     </ul>
+                    <ul class="treeview-menu">
+                        <li class="treeview"> <a href="{{ url('home5') }}"> Fakta Kondisi Demografi </a> </li>
+                    </ul>
 
 
             <li class="treeview">
@@ -50,6 +53,9 @@
                     </ul>
                     <ul class="treeview-menu">
                         <li class="treeview"> <a href="{{ url('master?category=pengendalian-penyakit') }}"> Fakta Pengendalian Penyakit </a> </li>
+                    </ul>
+                    <ul class="treeview-menu">
+                        <li class="treeview"> <a href="{{ url('master?category=kondisi-demografi') }}"> Fakta Kondisi Demografi </a> </li>
                     </ul>
 
 

@@ -91,5 +91,29 @@ return [
 	[
 		'name' => 'Tabel Persentase Kabupaten/Kota dengan Minimal 4 Puskesmas Mampu Tatalaksana PKPR',
 		'link' => 'tatalaksana-pkpr'
+	],
+	[
+		'name' => 'Tabel Angka Melek Huruf (Persentase Penduduk Umur 15 Tahun ke Atas Yang Melek Huruf)',
+		'link' => 'angka-melek'
+	],	
+	[
+		'name' => 'Tabel Estimasi Jumlah Balita (0-4 Tahun) Menurut Provinsi',
+		'link' => 'jumlah-balita'
+	],
+	[
+		'name' => 'Tabel Estimasi Jumlah Ibu Hamil Menurut Provinsi',
+		'link' => 'jumlah-ibuhamil'
+	],
+	[
+		'name' => 'Tabel Estimasi Penduduk Menurut Provinsi',
+		'link' => 'jumlah-penduduk'
+	],
+	[
+		'name' => 'Tabel Indeks Gini Menurut Provinsi',
+		'link' => 'indeks-gini'
+	],
+	[
+		'name' => 'Tabel Indeks Pembangunan Manusia Menurut Provinsi',
+		'link' => 'indeks-pembangunan-manusia'
 	]
 ];
