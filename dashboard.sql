@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 13, 2017 at 05:57 AM
+-- Generation Time: Oct 26, 2017 at 10:55 AM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.0.18
 
@@ -61,7 +61,13 @@ INSERT INTO `keterangan_tabel` (`id_keterangan`, `id_tablelist`, `keterangan`) V
 (20, 20, 'Tabel Rasio Puskesmas per 30.000 Penduduk se-Indonesia ini menyimpan data rasio puskesmas per 30.000 penduduk di Indonesia, dalam rentang waktu tiga tahun. Perlu diingat bahwa tabel ini belum sepenuhnya menggambarkan kondisi yang sebenarnya mengenai aksesibilitas masyarakat terhadap pelayanan fasilitas kesehatan dasar, karena data yang terdapat pada tabel ini belum mencakupi data jumlah penduduk di suatu provinsi dan data mengenai kondisi geografisnya.'),
 (21, 21, 'Tabel Rasio Tempat Tidur Rumah Sakit per 1000 Penduduk ini menyimpan data rasio tempat tidur yang ada di Rumah Sakit per 1000 penduduk di Indonesia, dalam rentang waktu tiga tahun. Tabel ini sekaligus menjelaskan tentang terpenuhi atau tidaknya kebutuhan masyarakat terhadap pelayanan kesehatan rujukan dan perorangan di suatu wilayah per 1000 penduduk di Indonesia.'),
 (22, 22, 'Tabel Persentase Spesimen Adekuat AFP ini menyimpan data angka persentase spesimen adekuat AFP yaitu Acute Flaccid Paralysis atau Penyakit Lumpuh Layu Akut.'),
-(23, 23, 'Tabel Persentase Kabupaten/Kota dengan Minimal 4 Puskesmas Mampu Tatalaksana PKPR ini menyimpan data persentase kota dengan minimal terdapat empat puskesmas yang mampu tatalaksana PKPR (Pelayanan Kesehatan Perilaku Remaja) di Puskesmas, yang bertujuan khusus untuk meningkatkan pengetahuan dan keterampilan remaja tentang kesehatan reproduksi dan perilaku hidup sehat serta memberikan pelayanan kesehatan yang berkualitas kepada remaja.  ');
+(23, 23, 'Tabel Persentase Kabupaten/Kota dengan Minimal 4 Puskesmas Mampu Tatalaksana PKPR ini menyimpan data persentase kota dengan minimal terdapat empat puskesmas yang mampu tatalaksana PKPR (Pelayanan Kesehatan Perilaku Remaja) di Puskesmas, yang bertujuan khusus untuk meningkatkan pengetahuan dan keterampilan remaja tentang kesehatan reproduksi dan perilaku hidup sehat serta memberikan pelayanan kesehatan yang berkualitas kepada remaja.  '),
+(24, 24, 'Tabel Angka Melek Huruf berisi persentase penduduk berumur 15 tahun ke atas yang dapat membaca dan menulis serta mengerti sebuah kalimat sederhana dalam hidupnya sehari-hari.\r\nAngka Melek Huruf menunjukan kemampuan penduduk dalam menyerap informasi dari berbagai media dan menunjukan kemampuan untuk berkomunikasi secara lisan dan tulisan. Angka Melek Huruf yang semakin besar diharapkan dapat mengurangi tingkat kemiskinan sehingga tingkat kesejahteraan diharapkan dapat semakin meningkat.'),
+(25, 25, 'Tabel ini berisi Estimasi Jumlah Balita (anak berumur 0-4 Tahun) menurut Provinsi yang ada di Indonesia'),
+(26, 26, 'Tabel ini berisi Estimasi Jumlah Ibu Hamil menurut Provinsi yang ada di Indonesia'),
+(27, 27, 'Tabel ini berisi Estimasi Jumlah Penduduk menurut Provinsi yang ada di Indonesia'),
+(28, 28, 'Tabel ini berisi Ukuran yang dapat menggambarkan ketimpangan pendapatan yaitu Koefisien Gini/Indeks Gini (Gini Ratio). Indeks Gini adalah suatu koefisien yang menunjukkan tingkat ketimpangan atau kemerataan distribusi pendapatan secara menyeluruh. Nilai Indeks Gini ada di antara 0 dan 1. Semakin tinggi nilai Indeks Gini menunjukkan ketidakmerataan pendapatan yang semakin tinggi. Apabila nilai Indeks Gini 0 artinya terdapat kemerataan sempurna pada distribusi pendapatan, sedangkan jika bernilai 1 berarti terjadi ketidakmerataan pendapatan yang sempurna. Selama bertahun-tahun, Indonesia memiliki Indeks Gini yang konstan yaitu sebesar 0,41.'),
+(29, 29, 'Tabel ini berisi Indeks Pembangunan Manusia (IPM) yang mengukur capaian pembangunan manusia, yang berbasis terhadap sejumlah komponen dasar kualitas hidup. IPM dibangun melalui pendekatan tiga dimensi dasar, sebagai ukuran kualitas hidup, yaitu umur panjang dan sehat, pengetahuan dan standar hidup layak.');
 
 -- --------------------------------------------------------
 
@@ -75,7 +81,7 @@ CREATE TABLE `md_angka_dbd` (
   `angka_dbd13` double NOT NULL,
   `angka_dbd14` double NOT NULL,
   `angka_dbd15` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `md_angka_dbd`
@@ -103,8 +109,8 @@ INSERT INTO `md_angka_dbd` (`id_dbd`, `nama_provinsi`, `angka_dbd13`, `angka_dbd
 (19, 'Nusa Tenggara Timur', 9.34, 3.29, 9.88),
 (20, 'Kalimantan Barat', 18.24, 111.05, 23.28),
 (21, 'Kalimantan Tengah', 43.24, 37.15, 60.2),
-(22, 'Kalimantan Selatan', 31.46, 21.16, 91.93),
-(23, 'Kalimantan Timur', 92.73, 135.46, 188.46),
+(22, 'Kalimantan Timur', 92.73, 135.46, 188.46),
+(23, 'Kalimantan Selatan', 31.46, 21.16, 91.93),
 (24, 'Kalimantan Utara', 0, 128.51, 112),
 (25, 'Sulawesi Utara', 50.8, 53.34, 30.26),
 (26, 'Sulawesi Barat', 43.63, 24.52, 37.9),
@@ -116,6 +122,61 @@ INSERT INTO `md_angka_dbd` (`id_dbd`, `nama_provinsi`, `angka_dbd13`, `angka_dbd
 (32, 'Maluku Utara', 21.87, 12.96, 10.24),
 (33, 'Papua', 8.47, 12.36, 20.54),
 (34, 'Papua Barat', 8.51, 8.78, 7.57);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `md_angka_melek`
+--
+
+CREATE TABLE `md_angka_melek` (
+  `id_angka_melek` int(11) NOT NULL,
+  `nama_provinsi` varchar(255) NOT NULL,
+  `angka_melek_13` double NOT NULL,
+  `angka_melek_14` double NOT NULL,
+  `angka_melek_15` double NOT NULL,
+  `angka_melek_16` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `md_angka_melek`
+--
+
+INSERT INTO `md_angka_melek` (`id_angka_melek`, `nama_provinsi`, `angka_melek_13`, `angka_melek_14`, `angka_melek_15`, `angka_melek_16`) VALUES
+(1, 'Nangroe Aceh Darussalam', 96.66, 97.42, 97.63, 97.74),
+(2, 'Sumatera Utara', 97.81, 98.57, 98.68, 98.88),
+(3, 'Sumatera Barat', 97.38, 98.44, 98.56, 98.81),
+(4, 'Riau', 97.88, 98.75, 98.87, 99.07),
+(5, 'Jambi', 96.72, 97.77, 97.84, 98.01),
+(6, 'Sumatera Selatan', 97.24, 98.14, 98.22, 98.46),
+(7, 'Bengkulu', 96.48, 97.52, 97.63, 97.75),
+(8, 'Lampung', 95.81, 96.54, 96.67, 96.78),
+(9, 'Bangka Belitung', 96.41, 97.6, 97.63, 97.66),
+(10, 'Kepulauan Riau', 97.91, 98.71, 98.79, 98.84),
+(11, 'DKI Jakarta', 99.14, 99.54, 99.59, 99.64),
+(12, 'Jawa Barat', 96.7, 97.96, 98.01, 98.22),
+(13, 'Jawa Tengah', 91.27, 92.98, 93.12, 93.3),
+(14, 'DI Yogyakarta', 92.82, 94.44, 94.5, 94.59),
+(15, 'Jawa Timur', 90.14, 91.36, 91.47, 91.59),
+(16, 'Banten', 96.64, 97.24, 97.37, 97.55),
+(17, 'Bali', 90.84, 92.56, 92.77, 92.82),
+(18, 'Nusa Tenggara Barat', 84.67, 86.96, 86.97, 87.06),
+(19, 'Nusa Tenggara Timur', 90.36, 91.18, 91.45, 91.52),
+(20, 'Kalimantan Barat', 91.34, 92.3, 92.32, 92.39),
+(21, 'Kalimantan Tengah', 97.93, 98.82, 98.88, 98.97),
+(22, 'Kalimantan Selatan', 97.04, 98.19, 98.21, 98.28),
+(23, 'Kalimantan Timur', 97.51, 98.59, 98.69, 98.82),
+(24, 'Kalimantan Utara', 0, 0, 94.99, 95.05),
+(25, 'Sulawesi Utara', 99.13, 99.6, 99.63, 99.79),
+(26, 'Sulawesi Tengah', 95.95, 97.08, 97.34, 97.51),
+(27, 'Sulawesi Selatan', 90.16, 91.26, 91.29, 91.52),
+(28, 'Sulawesi Tenggara', 92.61, 94.03, 94.1, 94.25),
+(29, 'Gorontalo', 96.83, 97.9, 98.24, 98.44),
+(30, 'Sulawesi Barat', 90.79, 92.27, 92.64, 92.75),
+(31, 'Maluku', 97.83, 98.77, 98.85, 98.964),
+(32, 'Maluku Utara', 97.37, 98.36, 98.49, 98.67),
+(33, 'Papua Barat', 95.59, 96.75, 96.88, 97.05),
+(34, 'Papua', 67.31, 70.78, 70.83, 71.02);
 
 -- --------------------------------------------------------
 
@@ -444,6 +505,281 @@ INSERT INTO `md_incidencerate_campak` (`id_incidencerate`, `nama_provinsi`, `inc
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `md_indeks_gini`
+--
+
+CREATE TABLE `md_indeks_gini` (
+  `id_indeksgini` int(11) NOT NULL,
+  `nama_provinsi` varchar(255) NOT NULL,
+  `indeks_gini_13` double NOT NULL,
+  `indeks_gini_14` double NOT NULL,
+  `indeks_gini_15` double NOT NULL,
+  `indeks_gini_16` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `md_indeks_gini`
+--
+
+INSERT INTO `md_indeks_gini` (`id_indeksgini`, `nama_provinsi`, `indeks_gini_13`, `indeks_gini_14`, `indeks_gini_15`, `indeks_gini_16`) VALUES
+(1, 'Nangroe Aceh Darussalam', 0.33, 0.34, 0.34, 0.34),
+(2, 'Sumatera Utara', 0.33, 0.31, 0.33, 0.31),
+(3, 'Sumatera Barat', 0.35, 0.33, 0.32, 0.31),
+(4, 'Riau', 0.39, 0.38, 0.37, 0.35),
+(5, 'Jambi', 0.33, 0.34, 0.34, 0.35),
+(6, 'Sumatera Selatan', 0.38, 0.38, 0.33, 0.36),
+(7, 'Bengkulu', 0.37, 0.36, 0.37, 0.35),
+(8, 'Lampung', 0.36, 0.33, 0.35, 0.36),
+(9, 'Bangka Belitung', 0.31, 0.3, 0.28, 0.29),
+(10, 'Kepulauan Riau', 0.38, 0.44, 0.34, 0.35),
+(11, 'DKI Jakarta', 0.4, 0.44, 0.42, 0.4),
+(12, 'Jawa Barat', 0.41, 0.4, 0.43, 0.4),
+(13, 'Jawa Tengah', 0.39, 0.39, 0.38, 0.36),
+(14, 'DI Yogyakarta', 0.42, 0.44, 0.42, 0.43),
+(15, 'Jawa Timur', 0.37, 0.4, 0.4, 0.4),
+(16, 'Banten', 0.38, 0.42, 0.39, 0.39),
+(17, 'Bali', 0.44, 0.44, 0.4, 0.37),
+(18, 'Nusa Tenggara Barat', 0.35, 0.39, 0.36, 0.37),
+(19, 'Nusa Tenggara Timur', 0.34, 0.36, 0.35, 0.36),
+(20, 'Kalimantan Barat', 0.38, 0.4, 0.33, 0.33),
+(21, 'Kalimantan Tengah', 0.36, 0.37, 0.3, 0.35),
+(22, 'Kalimantan Selatan', 0.36, 0.33, 0.33, 0.35),
+(23, 'Kalimantan Timur', 0.37, 0.36, 0.32, 0.33),
+(24, 'Kalimantan Utara', 0, 0, 0.31, 0.31),
+(25, 'Sulawesi Utara', 0.45, 0.44, 0.37, 0.38),
+(26, 'Sulawesi Tengah', 0.39, 0.35, 0.37, 0.35),
+(27, 'Sulawesi Selatan', 0.43, 0.45, 0.4, 0.4),
+(28, 'Sulawesi Tenggara', 0.39, 0.4, 0.38, 0.39),
+(29, 'Gorontalo', 0.45, 0.45, 0.4, 0.41),
+(30, 'Sulawesi Barat', 0.32, 0.38, 0.36, 0.37),
+(31, 'Maluku', 0.35, 0.33, 0.34, 0.34),
+(32, 'Maluku Utara', 0.32, 0.32, 0.29, 0.31),
+(33, 'Papua Barat', 0.42, 0.041, 0.43, 0.4),
+(34, 'Papua', 0.44, 0.46, 0.39, 0.4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `md_indeks_pembangunan_manusia`
+--
+
+CREATE TABLE `md_indeks_pembangunan_manusia` (
+  `id_ipm` int(11) NOT NULL,
+  `nama_provinsi` varchar(255) NOT NULL,
+  `ipm_13` double NOT NULL,
+  `ipm_14` double NOT NULL,
+  `ipm_15` double NOT NULL,
+  `ipm_16` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `md_indeks_pembangunan_manusia`
+--
+
+INSERT INTO `md_indeks_pembangunan_manusia` (`id_ipm`, `nama_provinsi`, `ipm_13`, `ipm_14`, `ipm_15`, `ipm_16`) VALUES
+(1, 'Nangroe Aceh Darussalam', 68.3, 68.81, 69.45, 70),
+(2, 'Sumatera Utara', 68.36, 68.87, 69.51, 70),
+(3, 'Sumatera Barat', 68.91, 69.36, 69.98, 70.73),
+(4, 'Riau', 69.91, 70.33, 70.84, 71.2),
+(5, 'Jambi', 67.76, 68.24, 68.89, 69.62),
+(6, 'Sumatera Selatan', 66.16, 66.75, 67.46, 68.24),
+(7, 'Bengkulu', 67.5, 68.06, 68.59, 69.33),
+(8, 'Lampung', 65.73, 66.42, 66.95, 67.65),
+(9, 'Bangka Belitung', 67.92, 68.27, 69.05, 69.55),
+(10, 'Kepulauan Riau', 73.02, 73.4, 73.75, 73.99),
+(11, 'DKI Jakarta', 78.08, 78.39, 78.99, 79.6),
+(12, 'Jawa Barat', 68.25, 68.8, 69.5, 70.05),
+(13, 'Jawa Tengah', 6802, 68.78, 69.49, 69.98),
+(14, 'DI Yogyakarta', 76.44, 76.81, 77.59, 78.38),
+(15, 'Jawa Timur', 67.55, 68.14, 68.95, 69.74),
+(16, 'Banten', 69.47, 69.89, 70.27, 70.96),
+(17, 'Bali', 72.09, 72.48, 73.27, 73.65),
+(18, 'Nusa Tenggara Barat', 63.76, 64.31, 65.19, 65.81),
+(19, 'Nusa Tenggara Timur', 61.68, 62.26, 62.67, 63.13),
+(20, 'Kalimantan Barat', 64.3, 64.89, 65.59, 65.88),
+(21, 'Kalimantan Tengah', 67.41, 67.77, 68.53, 69.13),
+(22, 'Kalimantan Selatan', 67.17, 67.63, 68.38, 69.05),
+(23, 'Kalimantan Timur', 73.21, 73.82, 74.17, 74.59),
+(24, 'Kalimantan Utara', 67.99, 68.64, 68.76, 69.2),
+(25, 'Sulawesi Utara', 69.49, 69.96, 70.39, 71.05),
+(26, 'Sulawesi Tengah', 65.79, 66.43, 66.76, 67.47),
+(27, 'Sulawesi Selatan', 67.92, 68.49, 69.15, 69.76),
+(28, 'Sulawesi Tenggara', 67.55, 68.07, 68.75, 69.31),
+(29, 'Gorontalo', 64.7, 65.17, 65.86, 66.29),
+(30, 'Sulawesi Barat', 61.53, 62.24, 62.96, 63.6),
+(31, 'Maluku', 66.09, 66.74, 67.05, 67.6),
+(32, 'Maluku Utara', 64.78, 65.18, 65.91, 66.63),
+(33, 'Papua Barat', 60.91, 61.28, 61.73, 62.21),
+(34, 'Papua', 56.25, 56.75, 57.25, 58.05);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `md_jumlah_balita`
+--
+
+CREATE TABLE `md_jumlah_balita` (
+  `id_jumlahbalita` int(11) NOT NULL,
+  `nama_provinsi` varchar(255) NOT NULL,
+  `jumlah_balita_13` double NOT NULL,
+  `jumlah_balita_14` double NOT NULL,
+  `jumlah_balita_15` double NOT NULL,
+  `jumlah_balita_16` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `md_jumlah_balita`
+--
+
+INSERT INTO `md_jumlah_balita` (`id_jumlahbalita`, `nama_provinsi`, `jumlah_balita_13`, `jumlah_balita_14`, `jumlah_balita_15`, `jumlah_balita_16`) VALUES
+(1, 'Nangroe Aceh Darussalam', 511643, 517763, 565567, 567780),
+(2, 'Sumatera Utara', 1492686, 1506665, 1566036, 1550033),
+(3, 'Sumatera Barat', 521355, 527487, 547703, 545359),
+(4, 'Riau', 714637, 739024, 719985, 727129),
+(5, 'Kepulauan Riau', 345710, 353986, 324389, 323535),
+(6, 'Jambi', 806606, 820198, 808952, 806001),
+(7, 'Bengkulu', 183807, 186575, 182625, 182675),
+(8, 'Sumatera Selatan', 763080, 771292, 798632, 788255),
+(9, 'Bangka Belitung', 139651, 143803, 130357, 131595),
+(10, 'Lampung', 231376, 242437, 218729, 219096),
+(11, 'DKI Jakarta', 861581, 872316, 945955, 934422),
+(12, 'Jawa Barat', 4342772, 4418126, 4383332, 4371807),
+(13, 'Banten', 2729781, 2735448, 2745813, 2712253),
+(14, 'Jawa Tengah', 263857, 266171, 274152, 275410),
+(15, 'DI Yogyakarta', 2976344, 2994110, 2929890, 2899420),
+(16, 'Jawa Timur', 1135443, 1165120, 1229320, 1226909),
+(17, 'Bali', 355224, 362274, 326017, 325151),
+(18, 'Nusa Tenggara Barat', 490206, 495140, 506430, 503860),
+(19, 'Nusa Tenggara Timur', 630371, 642378, 622757, 627471),
+(20, 'Kalimantan Barat', 462730, 466185, 499138, 497770),
+(21, 'Kalimantan Tengah', 244477, 248451, 250685, 252035),
+(22, 'Kalimantan Selatan', 476481, 383353, 410061, 406695),
+(23, 'Kalimantan Timur', 435717, 451586, 348331, 349038),
+(24, 'Kalimantan Utara', 0, 0, 70611, 71927),
+(25, 'Sulawesi Utara', 209082, 211414, 210512, 208701),
+(26, 'Sulawesi Barat', 305401, 310852, 299775, 299678),
+(27, 'Sulawesi Tengah', 815432, 823637, 838021, 834646),
+(28, 'Sulawesi Tenggara', 284248, 289691, 292698, 294820),
+(29, 'Sulawesi Selatan', 113599, 115979, 1101127, 110965),
+(30, 'Gorontalo', 148733, 152472, 144877, 146737),
+(31, 'Maluku', 202868, 208211, 200426, 202048),
+(32, 'Maluku Utara', 136531, 139678, 137576, 138071),
+(33, 'Papua', 104071, 107757, 96086, 97394),
+(34, 'Papua Barat', 365176, 384237, 329941, 331624);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `md_jumlah_ibuhamil`
+--
+
+CREATE TABLE `md_jumlah_ibuhamil` (
+  `id_jumlahibuhamil` int(11) NOT NULL,
+  `nama_provinsi` varchar(255) NOT NULL,
+  `jumlah_ibuhamil_13` double NOT NULL,
+  `jumlah_ibuhamil_14` double NOT NULL,
+  `jumlah_ibuhamil_15` double NOT NULL,
+  `jumlah_ibuhamil_16` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `md_jumlah_ibuhamil`
+--
+
+INSERT INTO `md_jumlah_ibuhamil` (`id_jumlahibuhamil`, `nama_provinsi`, `jumlah_ibuhamil_13`, `jumlah_ibuhamil_14`, `jumlah_ibuhamil_15`, `jumlah_ibuhamil_16`) VALUES
+(1, 'Nangroe Aceh Darussalam', 110644, 111991, 128525, 128497),
+(2, 'Sumatera Utara', 335046, 338258, 347747, 343978),
+(3, 'Sumatera Barat', 118847, 120270, 123367, 122662),
+(4, 'Riau', 155281, 160615, 167267, 168360),
+(5, 'Jambi', 76500, 78347, 73736, 73434),
+(6, 'Sumatera Selatan', 180479, 183561, 182527, 181085),
+(7, 'Bengkulu', 41435, 42069, 41391, 41298),
+(8, 'Lampung', 178318, 180278, 176506, 173699),
+(9, 'Bangka Belitung', 31569, 32515, 29713, 29868),
+(10, 'Kepulauan Riau', 53383, 55947, 47255, 46926),
+(11, 'DKI Jakarta', 192255, 194693, 196901, 194270),
+(12, 'Jawa Barat', 950358, 967062, 979472, 975580),
+(13, 'Jawa Tengah', 620078, 621502, 603099, 596722),
+(14, 'DI Yogyakarta', 59713, 60250, 59351, 59524),
+(15, 'Jawa Timur', 640456, 644423, 643557, 638168),
+(16, 'Banten', 245351, 251820, 271547, 270246),
+(17, 'Bali', 75906, 77431, 71977, 71720),
+(18, 'Nusa Tenggara Barat', 113460, 114627, 117073, 116301),
+(19, 'Nusa Tenggara Timur', 135712, 138327, 147331, 148553),
+(20, 'Kalimantan Barat', 100449, 101222, 113286, 112679),
+(21, 'Kalimantan Tengah', 50048, 50873, 58779, 58955),
+(22, 'Kalimantan Selatan', 87238, 88849, 92242, 91310),
+(23, 'Kalimantan Timur', 95930, 99445, 81998, 82224),
+(24, 'Kalimantan Utara', 0, 0, 0, 13338),
+(25, 'Sulawesi Utara', 45428, 45947, 13308, 45942),
+(26, 'Sulawesi Tengah', 64653, 65821, 46297, 69549),
+(27, 'Sulawesi Selatan', 182287, 184163, 67619, 188046),
+(28, 'Sulawesi Tenggara', 63577, 64809, 188921, 68140),
+(29, 'Gorontalo', 25007, 25538, 67860, 26008),
+(30, 'Sulawesi Barat', 31644, 32446, 25880, 35437),
+(31, 'Maluku', 43333, 44485, 35142, 48326),
+(32, 'Maluku Utara', 28253, 28911, 48069, 31942),
+(33, 'Papua Barat', 22727, 23538, 31897, 23450),
+(34, 'Papua', 57203, 60202, 23223, 78157);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `md_jumlah_penduduk`
+--
+
+CREATE TABLE `md_jumlah_penduduk` (
+  `id_jumlahpenduduk` int(11) NOT NULL,
+  `nama_provinsi` varchar(255) NOT NULL,
+  `jumlah_penduduk_13` double NOT NULL,
+  `jumlah_penduduk_14` double NOT NULL,
+  `jumlah_penduduk_15` double NOT NULL,
+  `jumlah_penduduk_16` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `md_jumlah_penduduk`
+--
+
+INSERT INTO `md_jumlah_penduduk` (`id_jumlahpenduduk`, `nama_provinsi`, `jumlah_penduduk_13`, `jumlah_penduduk_14`, `jumlah_penduduk_15`, `jumlah_penduduk_16`) VALUES
+(1, 'Nangroe Aceh Darussalam', 4671874, 4731705, 5001953, 5096248),
+(2, 'Sumatera Utara', 13391231, 13527937, 13937797, 14102911),
+(3, 'Sumatera Barat', 5035311, 5098790, 5196289, 5259528),
+(4, 'Riau', 6143274, 6358636, 6344402, 6500971),
+(5, 'Jambi', 3329887, 3412459, 3402052, 3458926),
+(6, 'Sumatera Selatan', 7857437, 7996535, 8052315, 8160901),
+(7, 'Bengkulu', 1799668, 1828291, 1874944, 1904793),
+(8, 'Lampung', 7880769, 7972246, 8117268, 8205141),
+(9, 'Bangka Belitung', 1339774, 1380762, 1372813, 1401827),
+(10, 'Kepulauan Riau', 1937577, 2031895, 1973043, 2028169),
+(11, 'DKI Jakarta', 10001943, 10135030, 10177924, 10277628),
+(12, 'Jawa Barat', 45472830, 46300543, 46709569, 47379389),
+(13, 'Jawa Tengah', 32684579, 32779832, 33774141, 34019095),
+(14, 'DI Yogyakarta', 3560080, 3594290, 3679176, 3720912),
+(15, 'Jawa Timur', 38268825, 38529481, 38847561, 39075152),
+(16, 'Banten', 11523018, 11834087, 11955243, 12203148),
+(17, 'Bali', 4139690, 4225384, 4152833, 4200069),
+(18, 'Nusa Tenggara Barat', 4651648, 4702389, 4835577, 4896162),
+(19, 'Nusa Tenggara Timur', 4971802, 5070746, 5120061, 5203514),
+(20, 'Kalimantan Barat', 4508968, 4546439, 4789574, 4861738),
+(21, 'Kalimantan Tengah', 2328823, 2368654, 2495035, 2550192),
+(22, 'Kalimantan Selatan', 3840547, 3913908, 3989793, 4055479),
+(23, 'Kalimantan Timur', 3967793, 3508012, 3426638, 3501232),
+(24, 'Kalimantan Utara', 0, 607729, 641936, 666333),
+(25, 'Sulawesi Utara', 2354668, 2382941, 2412118, 2436921),
+(26, 'Sulawesi Tengah', 2787164, 2839290, 2876689, 2921715),
+(27, 'Sulawesi Selatan', 8305154, 8395747, 8520304, 8606375),
+(28, 'Sulawesi Tenggara', 2370549, 2417962, 2499540, 2551008),
+(29, 'Gorontalo', 1110294, 1134498, 1133237, 1150765),
+(30, 'Sulawesi Barat', 1252071, 1284620, 1282162, 1306478),
+(31, 'Maluku', 1662965, 1708190, 1686469, 1715548),
+(32, 'Maluku Utara', 1114917, 1141561, 1162345, 1185912),
+(33, 'Papua Barat', 846711, 877437, 871510, 893362),
+(34, 'Papua', 3310715, 3486432, 3149375, 3207444);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `md_kasus_tb`
 --
 
@@ -494,29 +830,6 @@ INSERT INTO `md_kasus_tb` (`id_tbcase`, `nama_provinsi`, `kasus_tb13`, `kasus_tb
 (32, 'Maluku Utara', 101.1, 79, 150),
 (33, 'Papua', 113.6, 48, 216),
 (34, 'Papua Barat', 92.2, 66, 235);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `md_kesehatan_keluarga`
---
-
-CREATE TABLE `md_kesehatan_keluarga` (
-  `id_kesehatan_keluarga` int(11) NOT NULL,
-  `nama_provinsi` varchar(255) NOT NULL,
-  `id_ibuhamil` int(11) NOT NULL,
-  `id_persalinan` int(11) NOT NULL,
-  `id_kebidanan` int(11) NOT NULL,
-  `id_kb` int(11) NOT NULL,
-  `id_neonatalk` int(11) NOT NULL,
-  `id_neonatal1` int(11) NOT NULL,
-  `id_neonatalfull` int(11) NOT NULL,
-  `id_campak` int(11) NOT NULL,
-  `id_dasarlengkap` int(11) NOT NULL,
-  `id_uci` int(11) NOT NULL,
-  `id_asi` int(11) NOT NULL,
-  `id_tatalaksana` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -1511,7 +1824,13 @@ INSERT INTO `table_list` (`id_tablelist`, `name`, `link`, `categories`) VALUES
 (20, 'Tabel Rasio Puskesmas per 30.000 Penduduk se-Indonesia', 'rasio-puskesmas', 'sarana-kesehatan'),
 (21, 'Tabel Rasio Tempat Tidur Rumah Sakit per 1000 Penduduk', 'rasio-tempattidur', 'sarana-kesehatan'),
 (22, 'Tabel Persentase Spesimen Adekuat AFP', 'spesimen-adekuat', 'pengendalian-penyakit'),
-(23, 'Tabel Persentase Kabupaten/Kota dengan Minimal 4 Puskesmas Mampu Tatalaksana PKPR', 'tatalaksana-pkpr', 'kesehatan-keluarga');
+(23, 'Tabel Persentase Kabupaten/Kota dengan Minimal 4 Puskesmas Mampu Tatalaksana PKPR', 'tatalaksana-pkpr', 'kesehatan-keluarga'),
+(24, 'Tabel Angka Melek Huruf (Persentase Penduduk Umur 15 Tahun ke Atas Yang Melek Huruf)', 'angka-melek', 'kondisi-demografi'),
+(25, 'Tabel Estimasi Jumlah Balita (0-4 Tahun) Menurut Provinsi', 'jumlah-balita', 'kondisi-demografi'),
+(26, 'Tabel Estimasi Jumlah Ibu Hamil Menurut Provinsi', 'jumlah-ibuhamil', 'kondisi-demografi'),
+(27, 'Tabel Estimasi Penduduk Menurut Provinsi', 'jumlah-penduduk', 'kondisi-demografi'),
+(28, 'Tabel Indeks Gini Menurut Provinsi', 'indeks-gini', 'kondisi-demografi'),
+(29, 'Tabel Indeks Pembangunan Manusia Menurut Provinsi', 'indeks-pembangunan-manusia', 'kondisi-demografi');
 
 -- --------------------------------------------------------
 
@@ -1534,7 +1853,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `password`, `remember_token`, `created_at`, `updated_at`, `username`) VALUES
-(1, 'Vicky Vadya Royibha', '$2y$10$EQoUN4S8cng4Pq0tXPOCa.czn1oMFTH/cSpIrF45qbj9SOdUK.hU2', 'L3Xs3kIq0Vtb49A9m2IA7uhgI8M4IC2VoWYzPh1Tst2PkIB5PemZCNWrBjDu', '2017-05-16 07:46:37', '2017-05-16 07:46:37', 'vickyroyibha'),
+(1, 'Vicky Vadya Royibha', '$2y$10$EQoUN4S8cng4Pq0tXPOCa.czn1oMFTH/cSpIrF45qbj9SOdUK.hU2', 'q5gaFsOwXgZvT5HZWuPtE1mcxF72LzBu1ccKBwO7gEHG1xKr2DaOsY7XoJgB', '2017-05-16 07:46:37', '2017-05-16 07:46:37', 'vickyroyibha'),
 (2, 'Taylor Swift', '$2y$10$QS9J1l59Br4draAuFfKcc.ZQ/Yph0ikQ4TPcLPPdbJ7uKEdmGHn7S', 'zp2Nc6huOe4mnEjjJRucgYICU0brHCiv5J8zGdJPHPuEU01EatmwvKhgrH64', '2017-09-01 01:40:41', '2017-09-01 01:40:41', 'taylorswift'),
 (3, 'Admin Sistem', '$2y$10$Q8nOFyHEoiUWWgKXjUV5C.pCSDiqVCId1SdQ1CUsEWKPWYIPXz2uC', 'qye9rYUCx2oV9mFqq5YbqtbwasRpLA0YPC79JXqp5EvOerbjFT6M3CEPWGtg', '2017-09-18 18:42:41', '2017-09-18 18:42:41', 'admin');
 
@@ -1553,6 +1872,12 @@ ALTER TABLE `keterangan_tabel`
 --
 ALTER TABLE `md_angka_dbd`
   ADD PRIMARY KEY (`id_dbd`);
+
+--
+-- Indexes for table `md_angka_melek`
+--
+ALTER TABLE `md_angka_melek`
+  ADD PRIMARY KEY (`id_angka_melek`);
 
 --
 -- Indexes for table `md_asi_eksklusif`
@@ -1591,28 +1916,40 @@ ALTER TABLE `md_incidencerate_campak`
   ADD PRIMARY KEY (`id_incidencerate`);
 
 --
+-- Indexes for table `md_indeks_gini`
+--
+ALTER TABLE `md_indeks_gini`
+  ADD PRIMARY KEY (`id_indeksgini`);
+
+--
+-- Indexes for table `md_indeks_pembangunan_manusia`
+--
+ALTER TABLE `md_indeks_pembangunan_manusia`
+  ADD PRIMARY KEY (`id_ipm`);
+
+--
+-- Indexes for table `md_jumlah_balita`
+--
+ALTER TABLE `md_jumlah_balita`
+  ADD PRIMARY KEY (`id_jumlahbalita`);
+
+--
+-- Indexes for table `md_jumlah_ibuhamil`
+--
+ALTER TABLE `md_jumlah_ibuhamil`
+  ADD PRIMARY KEY (`id_jumlahibuhamil`);
+
+--
+-- Indexes for table `md_jumlah_penduduk`
+--
+ALTER TABLE `md_jumlah_penduduk`
+  ADD PRIMARY KEY (`id_jumlahpenduduk`);
+
+--
 -- Indexes for table `md_kasus_tb`
 --
 ALTER TABLE `md_kasus_tb`
   ADD PRIMARY KEY (`id_tbcase`);
-
---
--- Indexes for table `md_kesehatan_keluarga`
---
-ALTER TABLE `md_kesehatan_keluarga`
-  ADD PRIMARY KEY (`id_kesehatan_keluarga`),
-  ADD KEY `id_ibuhamil` (`id_ibuhamil`),
-  ADD KEY `id_persalinan` (`id_persalinan`),
-  ADD KEY `id_neonatalk` (`id_neonatalk`),
-  ADD KEY `id_neonatal1` (`id_neonatal1`),
-  ADD KEY `id_neonatalfull` (`id_neonatalfull`),
-  ADD KEY `id_kebidanan` (`id_kebidanan`),
-  ADD KEY `id_kb` (`id_kb`),
-  ADD KEY `id_campak` (`id_campak`),
-  ADD KEY `id_dasarlengkap` (`id_dasarlengkap`),
-  ADD KEY `id_uci` (`id_uci`),
-  ADD KEY `id_asi` (`id_asi`),
-  ADD KEY `id_tatalaksana` (`id_tatalaksana`);
 
 --
 -- Indexes for table `md_komplikasi_kebidanan`
@@ -1757,13 +2094,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `keterangan_tabel`
 --
 ALTER TABLE `keterangan_tabel`
-  MODIFY `id_keterangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_keterangan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `md_angka_dbd`
 --
 ALTER TABLE `md_angka_dbd`
   MODIFY `id_dbd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `md_angka_melek`
+--
+ALTER TABLE `md_angka_melek`
+  MODIFY `id_angka_melek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `md_asi_eksklusif`
@@ -1802,16 +2145,40 @@ ALTER TABLE `md_incidencerate_campak`
   MODIFY `id_incidencerate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
+-- AUTO_INCREMENT for table `md_indeks_gini`
+--
+ALTER TABLE `md_indeks_gini`
+  MODIFY `id_indeksgini` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `md_indeks_pembangunan_manusia`
+--
+ALTER TABLE `md_indeks_pembangunan_manusia`
+  MODIFY `id_ipm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `md_jumlah_balita`
+--
+ALTER TABLE `md_jumlah_balita`
+  MODIFY `id_jumlahbalita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `md_jumlah_ibuhamil`
+--
+ALTER TABLE `md_jumlah_ibuhamil`
+  MODIFY `id_jumlahibuhamil` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `md_jumlah_penduduk`
+--
+ALTER TABLE `md_jumlah_penduduk`
+  MODIFY `id_jumlahpenduduk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
 -- AUTO_INCREMENT for table `md_kasus_tb`
 --
 ALTER TABLE `md_kasus_tb`
   MODIFY `id_tbcase` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
---
--- AUTO_INCREMENT for table `md_kesehatan_keluarga`
---
-ALTER TABLE `md_kesehatan_keluarga`
-  MODIFY `id_kesehatan_keluarga` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `md_komplikasi_kebidanan`
@@ -1931,7 +2298,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `table_list`
 --
 ALTER TABLE `table_list`
-  MODIFY `id_tablelist` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_tablelist` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -1942,23 +2309,6 @@ ALTER TABLE `users`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `md_kesehatan_keluarga`
---
-ALTER TABLE `md_kesehatan_keluarga`
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_1` FOREIGN KEY (`id_ibuhamil`) REFERENCES `md_pelayanan_ibuhamil` (`id_ibuhamil`),
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_10` FOREIGN KEY (`id_uci`) REFERENCES `md_desa_uci` (`id_uci`),
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_11` FOREIGN KEY (`id_asi`) REFERENCES `md_asi_eksklusif` (`id_asi`),
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_12` FOREIGN KEY (`id_tatalaksana`) REFERENCES `md_tatalaksana_pkpr` (`id_tatalaksana`),
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_2` FOREIGN KEY (`id_persalinan`) REFERENCES `md_pertolongan_persalinan` (`id_persalinan`),
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_3` FOREIGN KEY (`id_neonatalk`) REFERENCES `md_komplikasi_neonatal` (`id_neonatalk`),
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_4` FOREIGN KEY (`id_neonatal1`) REFERENCES `md_neonatal_pertama` (`id_neonatal1`),
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_5` FOREIGN KEY (`id_neonatalfull`) REFERENCES `md_neonatal_lengkap` (`id_neonatalfull`),
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_6` FOREIGN KEY (`id_kebidanan`) REFERENCES `md_penanganan_kebidanan` (`id_kebidanan`),
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_7` FOREIGN KEY (`id_kb`) REFERENCES `md_peserta_kb` (`id_kb`),
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_8` FOREIGN KEY (`id_campak`) REFERENCES `md_imunisasi_campak` (`id_campak`),
-  ADD CONSTRAINT `md_kesehatan_keluarga_ibfk_9` FOREIGN KEY (`id_dasarlengkap`) REFERENCES `md_dasar_lengkap` (`id_dasarlengkap`);
 
 --
 -- Constraints for table `md_pengendalian_penyakit`
