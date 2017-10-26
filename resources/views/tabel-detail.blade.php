@@ -18,6 +18,9 @@
 						<a href={{ url('master') }}>
 						<button class="btn"><i class="fa fa-arrow-left"></i> Kembali </button>
 						</a>
+						<a href={{ url('create-table') }}>
+						<button class="btn"><i class="fa fa-plus-circle"></i> Tambah Data </button>
+						</a>
 						<p><table class="table">
 							<tr>
 								<th> No </th>

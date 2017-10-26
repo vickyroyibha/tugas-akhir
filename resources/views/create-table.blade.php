@@ -54,7 +54,7 @@
                                 <label class="col-md-4 control-label">Provinsi {{ $province['name'] }}</label>
 
                                 <div class="col-md-6">
-                                    <input type="number" class="form-control" name="{{ $province['slug'] }}" value="{{ old($province['slug']) }}">
+                                    <input type="number" step="0.001" class="form-control" name="{{ $province['slug'] }}" value="{{ old($province['slug']) }}">
 
                                     @if ($errors->has($province['slug']))
                                     <span class="help-block">
